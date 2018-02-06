@@ -1,0 +1,18 @@
+<h2>Tasks</h2>
+
+<p>Click a task to toggle <i>done</i></p>
+
+<ul>
+	<li ng-repeat="task in tasks"
+		ng-class="{'strike green' : task.done}"
+		ng-click="toggleTask(task)"
+		class="pointer">
+		{{task.name}}
+	</li>
+</ul>
+
+<div class="mt4">
+	<label>Add a task:
+	<input ng-model="newTaskText">
+	<button ng-click="addTask(newTaskText)">Add</button>
+</div>
