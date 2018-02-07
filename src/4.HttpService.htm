@@ -1,0 +1,66 @@
+<!DOCTYPE HTML>
+<html ng-app="myApp">
+<head>
+<title>HttpService</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="tachyons.min.css">
+</head>
+<body class="sans-serif" ng-controller="MainController">
+	<main class="pa2">
+		<h1>HttpService</h1>
+		
+		<p>This demo uses https://jsonplaceholder.typicode.com/ for data.</p>
+		
+		<p><small><b>Note:</b> 'post' means a news or forum post, 'POST' refers to the HTTP verb</small></p>
+		
+		<div class="bt bb bw1 b--black pv2">
+			<label class="b">Response:</label>
+			<pre class="ws-normal" ng-bind="response"></pre>
+		</div>
+		
+		<h2>GET a post</h2>
+		<div>
+			<label>
+				ID (1 to 100):
+				<input class="h2 mv1" type="number" ng-model="postId" value="1">
+			</label>
+			<button class="h2 b"
+			ng-click="getPost(postId)">GET</button>
+		</div>
+			
+		<h2>POST (create) a post</h2>
+		<p><small><b>Note:</b> 'created' posts will not really be saved to the remote server, but you will get a POST response as though the response was created.</p>
+		<div class="mv1">
+			<label>
+				Title:
+				<input class="h2 db mv1" ng-model="postTitle">
+			</label>
+		</div>
+		<div class="mv1">
+			<label>
+				Body:
+				<input class="h2 db mv1 w-50-ns w-100" ng-model="postBody">
+			</label>
+		</div>
+		<div class="mv1">
+			<label>
+				User ID:
+				<input class="h2 db mv1" ng-model="postUserId">
+			</label>
+		</div>
+		<div>
+			<button
+			class="h2 b"
+			ng-click="addPost(postTitle, postBody, postUserId)">POST</button>
+		</div>
+		
+	</main>
+	
+	<script src="angular.min.js"></script>
+	<script src="4.HttpService.js"></script>
+	<script>
+	
+	</script>
+</body>
+</html>
