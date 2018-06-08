@@ -4,13 +4,13 @@ var myApp = angular.module('myApp',[]);
 	Two different controllers which we'll only use to set the text
 	of the next-button directive
 */
-myApp.controller('MainController', ['$scope', function($scope) {
+myApp.controller('NormalStepController', ['$scope', function($scope) {
 	
 	$scope.nextButtonText = "Next";
 	
 }]);
 
-myApp.controller('FinalPageController', ['$scope', function($scope) {
+myApp.controller('FinalStepController', ['$scope', function($scope) {
 
 	$scope.nextButtonText = "Finish";
 	
@@ -18,15 +18,19 @@ myApp.controller('FinalPageController', ['$scope', function($scope) {
 
 /*
 	AngularJS Directives are translated between camelCase and kebab-dash-case automagically
-	The 'name' attribute here is a very special property which is just for naming the attribute 
-	to which you want to supply the controller name to.
+	
 */
 myApp.directive('nextButton', function(){
     return {
         restrict : 'E',
+		// Setting a scope object is essential, to isolate
+		// the scope of each instance of the directive
+		scope : {}, 
         template : '<button>{{nextButtonText}}</button>',
 		controller : '@',
-        name : 'controller'
+		// The 'name' attribute here is a very special property
+		// for naming the attribute you want to supply the controller name
+        name : 'controllerName'
     }
 });
 

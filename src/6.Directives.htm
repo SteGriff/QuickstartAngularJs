@@ -7,10 +7,13 @@
 <link rel="stylesheet" href="tachyons.min.css">
 </head>
 <body class="sans-serif">
-	<main class="pa2">
+	<main class="pa2 measure-wide">
 		<h1>Directives</h1>
 		
-		<p>See the <code>6.Directives.js</code> file for more comments</p>
+		<p>
+		See the <code>6.Directives.js</code> file for more comments.
+		Note that in AngularJS, directives are not allowed to be <code>&lt;self-closing elements /&gt;</code>
+		</p>
 		
 		<h2>An attribute directive</h2>
 		
@@ -26,16 +29,16 @@
 		
 		
 		<h2>Directive accepting a passed controller</h2>
-		<p>These two <code>next-button</code> elements each get their text from the passed-in controller:</p>
+		<p>These two <code>next-button</code> elements each get their text from the passed controller:</p>
 		
-		<div>
-			<h3>MainController</h3>
-			<next-button controller="MainController" />
+		<div >
+			<h3>NormalStepController</h3>
+			<next-button controller-name="NormalStepController"></next-button>
 		</div>
 		 
-		<div>
-			<h3>FinalPageController</h3>
-			<next-button controller="FinalPageController"/>
+		<div >
+			<h3>FinalStepController</h3>
+			<next-button controller-name="FinalStepController"></next-button>
 		</div>
 		
 	</main>
