@@ -1,6 +1,6 @@
 # Quickstart Angular.js
 
-Self-documenting, basic prototypes/examples to get started with Angular JS (1.x). Here for me (and others?) to refer back to.
+Self-documenting, basic prototypes/examples to get started with AngularJS (1.x). Here for me (and others?) to refer back to.
 
 ## Examples (in `src`)
 
@@ -9,5 +9,6 @@ Self-documenting, basic prototypes/examples to get started with Angular JS (1.x)
  3. [NgIncludeViews](src/3.NgIncludeViews.htm) - Using `ng-include` to switch views in a single page app
  4. [HttpService](src/4.HttpService.htm) - Use `$http` service in a controller to do XHR stuff
  5. [LocalStorage](src/5.LocalStorage.htm) - Use [grevory/angular-local-storage][grev] to preserve values over page Refresh
+ 6. [Directives](src/6.Directives.htm) - Examples of attribute and element directives, and passing a controller into an element directive
  
 [grev]: https://github.com/grevory/angular-local-storage

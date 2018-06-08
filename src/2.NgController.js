@@ -17,4 +17,9 @@ myApp.controller('MainController', ['$scope', function($scope) {
 			$scope.buttons.push($scope.newButtonText);
 		}
 	}
+	
+	$scope.urlFunction = function()
+	{
+		return $scope.message.replace(" ", "");
+	}
 }]);
